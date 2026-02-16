@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Paiement</title>
+</head>
+<body style="font-family:Arial">
+
+<h2>💰 Paiement</h2>
+
+<p>Montant à payer :
+<b><span id="prix"></span> FC</b></p>
+
+<p><b>Moyens de paiement :</b></p>
+<ul>
+<li>Orange Money</li>
+<li>Airtel Money</li>
+<li>M-Pesa</li>
+<li>Afrimoney</li>
+</ul>
+
+<p>
+Envoyez l’argent au numéro :<br>
+<b>089 050 3737</b>
+</p>
+
+<button onclick="go()">J’ai payé</button>
+
+<script>
+document.getElementById("prix").innerText =
+localStorage.getItem("prix");
+
+function go(){
+ window.location.href="attente.html";
+}
+</script>
+
+</body>
+</html>
