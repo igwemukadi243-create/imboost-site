@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>IMBOOST</title>
+</head>
+<body style="font-family:Arial;text-align:center">
+
+<h1>IMBOOST</h1>
+<p>Boostez vos réseaux sociaux rapidement</p>
+
+<h2>Choisissez un réseau</h2>
+
+<button onclick="go('Facebook')">Facebook</button>
+<button onclick="go('Instagram')">Instagram</button>
+<button onclick="go('TikTok')">TikTok</button>
+<button onclick="go('YouTube')">YouTube</button>
+
+<script>
+function go(r){
+ localStorage.setItem("reseau", r);
+ window.location.href="commande.html";
+}
+</script>
+
+</body>
+</html>
