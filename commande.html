@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Commande</title>
+</head>
+<body style="font-family:Arial">
+
+<h2 id="titre"></h2>
+
+<form onsubmit="payer();return false;">
+<label>Lien du compte :</label><br>
+<input required><br><br>
+
+<label>Service :</label><br>
+<select id="service">
+<option value="1500">1000 Likes – 1 500 FC</option>
+<option value="3000">2000 Followers – 3 000 FC</option>
+<option value="6000">4000 Followers – 6 000 FC</option>
+<option value="16000">10000 Followers – 16 000 FC</option>
+<option value="20000">20000 Followers – 20 000 FC</option>
+</select><br><br>
+
+<button type="submit">Commander</button>
+</form>
+
+<script>
+document.getElementById("titre").innerText =
+"Commande " + localStorage.getItem("reseau");
+
+function payer(){
+ localStorage.setItem("prix",
+ document.getElementById("service").value);
+ window.location.href="paiement.html";
+}
+</script>
+
+</body>
+</html>
